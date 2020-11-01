@@ -2,13 +2,13 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>$ wget blog</title>
+<title>Archives - $ wget blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/fr/index.html" rel="alternate" hreflang="fr" />
+<link href="/archives/index.html" rel="alternate" hreflang="en" />
     
 
 
@@ -59,7 +59,7 @@
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
+            <a class="navbar-item navbar-logo" href="/fr">
                 
                     
                     blog.julio
@@ -76,20 +76,20 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item "
-               href="/archives">Archives</a>
+            <a class="navbar-item is-active"
+               href="/fr/archives">Archives</a>
             
             <a class="navbar-item "
                href="/categories/Maths">Maths</a>
             
             <a class="navbar-item "
-               target="_blank" rel="noopener" href="https://julio.red">About</a>
+               target="_blank" rel="noopener" href="https://julio.red">À propos</a>
             
         </div>
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="Chercher" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -103,7 +103,7 @@
                 <span class="icon">
                     <i class="fas fa-globe"></i>
                 </span>
-                <span>English</span>
+                <span>Français</span>
                 <span class="icon is-small">
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
@@ -112,11 +112,11 @@
         <div class="dropdown-menu has-text-left" role="menu" style="top:100%">
             <div class="dropdown-content">
             
-                <a href="/index.html" class="dropdown-item">
+                <a href="/archives/index.html" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/fr/index.html" class="dropdown-item">
+                <a href="/fr/archives/index.html" class="dropdown-item">
                     Français
                 </a>
             
@@ -132,45 +132,19 @@
     <section class="section">
     <div class="container">
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/en/Chi-squared-statistic-test/" itemprop="url">Chi-squared statistic test</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2020-11-01T16:31:26.000Z" itemprop="datePublished">Nov 1 2020</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Maths/">Maths</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            a few seconds read (About 11 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p>Not translated yet See <a href="../../fr/Chi-squared-statistic-test/">original post</a></p>
-</body></html>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
+        <div class="archive content">
+            <h4 class="title is-4" id="2020">2020</h4>
+            <div class="articles">
+            
+                <div class="article content>">
+                    <time class="is-text-small" datetime="2020-11-01T16:31:36.000Z" itemprop="datePublished">
+                        nov. 1</time>
+                    <h6 class="title is-6"><a href="/fr/Chi-squared-statistic-test/">Tests statistiques du Khi-2: indépendance et ajustement</a></h6>
+                </div>
+            
+            </div>
+        </div>
     
     
     </div>
@@ -241,7 +215,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    moment.locale("fr");
 </script>
 
 
@@ -356,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Que voulez-vous chercher ?" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -370,11 +344,11 @@ document.addEventListener("DOMContentLoaded", function() {
             TRANSLATION: {
                 POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                CATEGORIES: 'Catégories',
                 TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                UNTITLED: '(Sans Titre)',
             },
-            CONTENT_URL: '/content.json',
+            CONTENT_URL: '/content.fr.json',
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);

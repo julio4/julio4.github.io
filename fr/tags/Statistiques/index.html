@@ -2,13 +2,13 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>$ wget blog</title>
+<title>Tag: Statistiques - $ wget blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/fr/index.html" rel="alternate" hreflang="fr" />
+<link href="/tags/Statistiques/index.html" rel="alternate" hreflang="en" />
     
 
 
@@ -59,7 +59,7 @@
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
+            <a class="navbar-item navbar-logo" href="/fr">
                 
                     
                     blog.julio
@@ -77,19 +77,19 @@
         <div class="navbar-menu navbar-start">
             
             <a class="navbar-item "
-               href="/archives">Archives</a>
+               href="/fr/archives">Archives</a>
             
             <a class="navbar-item "
                href="/categories/Maths">Maths</a>
             
             <a class="navbar-item "
-               target="_blank" rel="noopener" href="https://julio.red">About</a>
+               target="_blank" rel="noopener" href="https://julio.red">À propos</a>
             
         </div>
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="Chercher" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -103,7 +103,7 @@
                 <span class="icon">
                     <i class="fas fa-globe"></i>
                 </span>
-                <span>English</span>
+                <span>Français</span>
                 <span class="icon is-small">
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
@@ -112,11 +112,11 @@
         <div class="dropdown-menu has-text-left" role="menu" style="top:100%">
             <div class="dropdown-content">
             
-                <a href="/index.html" class="dropdown-item">
+                <a href="/tags/Statistiques/index.html" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/fr/index.html" class="dropdown-item">
+                <a href="/fr/tags/Statistiques/index.html" class="dropdown-item">
                     Français
                 </a>
             
@@ -129,38 +129,110 @@
     </div>
 </nav>
 
-    <section class="section">
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5>#Statistiques</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
     <div class="container">
     
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/en/Chi-squared-statistic-test/" itemprop="url">Chi-squared statistic test</a>
+            <a href="/fr/Chi-squared-statistic-test/" itemprop="url">Tests statistiques du Khi-2: indépendance et ajustement</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
             
-                <time datetime="2020-11-01T16:31:26.000Z" itemprop="datePublished">Nov 1 2020</time>
+                <time datetime="2020-11-01T16:31:36.000Z" itemprop="datePublished">nov. 1 2020</time>
             
         </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Maths/">Maths</a>
+            <a class="article-category-link" href="/fr/categories/Maths/">Maths</a>
         </span>
         
         
         <span class="column is-narrow">
             
             
-            a few seconds read (About 11 words)
+            3 minutes de lecture (Environ 508 mots)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p>Not translated yet See <a href="../../fr/Chi-squared-statistic-test/">original post</a></p>
+        <html><head></head><body><h1 id="les-tests-dhypot&#xE8;ses">Les Tests d&apos;hypot&#xE8;ses</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Un test d&apos;hypot&#xE8;se permet de d&#xE9;cider une hypot&#xE8;se &#xE0; partir d&apos;une observation partielle. On appelle <span class="math inline">\(H_0\)</span> l&apos;hypot&#xE8;se &#xE0; v&#xE9;rifier &quot;par d&#xE9;faut&quot;, et <span class="math inline">\(H_1(H_0\)</span> est fausse<span class="math inline">\()\)</span>.</p>
+<p>Pour cela on utilise le test du khi-deux <span class="math inline">\(\chi^2\)</span> Il existe plusieurs types de test, qui suivent une m&#xE9;thode communes:</p>
+<ol type="1">
+<li>On compare : tableau <em>observ&#xE9;</em> avec le tableau <em>th&#xE9;orique</em></li>
+<li>On calcule la distance <span class="math inline">\(T\)</span> entre ces tableaux</li>
+<li>On calcule le degr&#xE9; de libert&#xE9; <span class="math inline">\(ddl\)</span></li>
+<li>On trouve, &#xE0; l&apos;aide de la table de <span class="math inline">\(\chi^2~(ddl,\alpha=niveau~de ~libert&#xE9;~en~\%)\)</span>, la valeur critique de la distance</li>
+<li>On rejette <span class="math inline">\(H_0\)</span> si la distance est sup&#xE9;rieure &#xE0; la valeur critique</li>
+</ol>
+<h3 id="le-test-dajustement">Le test d&apos;ajustement</h3>
+<p>Pour tester si une variable <strong><em>suit une loi donn&#xE9;e.</em></strong> Exemple: X (une v.a) suit/ne suit pas la loi L?</p>
+<ol type="1">
+<li>On pose les alternative:</li>
+</ol>
+<p><span class="math display">\[\large H_0 = &quot;La~variable~X~suit~la~loi~L&quot;\\H_1 = &quot;La~variable~X~ne~suit~pas~la~loi~L&quot;\]</span></p>
+<ol type="1">
+<li><p>On calcule la distance du <span class="math inline">\(\chi^2\)</span> avec le tableaux observ&#xE9; et th&#xE9;orique:</p>
+<p><span class="math display">\[T = \displaystyle\sum_{i=1}^k \frac{(n_i-np_i)^2}{np_i} =  \sum\frac{(eff~obs-eff~th&#xE9;o)^2}{eff~th&#xE9;o}\]</span></p></li>
+<li><p>On calcule la zone de rejet (en trouvant la valeur critique <span class="math inline">\(c\)</span> dans la table):</p>
+<p><span class="math display">\[ddl = nb~classes - nb~param&#xE8;tres - 1 \\\alpha=niveau~de ~libert&#xE9;~en~\%\]</span></p></li>
+<li><p>Si <span class="math inline">\(T &gt; c\)</span>, on rejette <span class="math inline">\(H_0\)</span>, sinon on accepte <span class="math inline">\(H_0\)</span></p></li>
+</ol>
+<h3 id="le-test-dind&#xE9;pendance">Le test d&apos;ind&#xE9;pendance</h3>
+<p>Pour tester si des variables <strong><em>sont ind&#xE9;pendantes.</em></strong> Exemple: X et Y (des va.) sont/ne sont pas ind&#xE9;pendantes ?</p>
+<ol type="1">
+<li><p>On pose les alternative: <span class="math display">\[
+ H_0 = &quot;X~et~Y~sont~ind&#xE9;pendantes&quot;\\
+ H_1 = &quot;X~et~Y~ne~sont~pas~ind&#xE9;pendantes&quot;
+ \]</span></p>
+<p>On a le tableau suivant:</p>
+<p><span class="math display">\[
+ \begin{array}{c|ccc:c}
+ XY &amp; y_1 &amp; y_j&amp; y_r &amp; \sum \\ \hline
+ x_1 &amp; n_{1,1} &amp; n_{1,j} &amp; n_{1,r} &amp; n_1. \\
+ x_k &amp; n_{k,1} &amp; \textcolor{red}{n_{k,j}} &amp; n_{k,r} &amp; \textcolor{blue}{n_k.}\\
+ x_q &amp; n_{q,1} &amp; n_{q,j} &amp; n_{q,r} &amp; n_q.\\ \hdashline
+ \sum &amp; n._1 &amp; \textcolor{green}{n._j} &amp; n._j &amp; \bold{n.. = n}
+ \end{array}
+ \]</span></p></li>
+<li><p>On calcule la distance du <span class="math inline">\(\chi^2\)</span> avec le tableaux observ&#xE9; et th&#xE9;orique:</p>
+<p><span class="math display">\[
+ T = \displaystyle\sum_{k=1,...,q}\sum_{j=1,...,r} \frac{(n_{kj}-\textcolor{red}{n_{kj}(th&#xE9;o)})^2}{\textcolor{red}{n_{kj}(th&#xE9;o)}} =  \sum_k\sum_j\frac{(eff~obs-eff~th&#xE9;o)^2}{eff~th&#xE9;o}\\
+ avec~\textcolor{red}{n_{k,j}(th&#xE9;o)} = \frac{\textcolor{blue}{n_k.}\textcolor{green}{n._j}}{n}
+ \]</span></p>
+<p><span class="math display">\[\large Exemple:~tableau~observ&#xE9;e \\ \begin{array}{c|cc:c}
+ XY &amp; y_1 &amp; y_2 &amp; \sum \\ \hline
+ x_1 &amp; 5 &amp; 10 &amp; 15 \\
+ x_2 &amp; 3 &amp; 10 &amp; 13\\ \hdashline
+ \sum &amp; 8 &amp; 20 &amp; \bold{n = 28}
+ \end{array} \\~\\
+ T = \frac{(5-\frac{15*8}{28})^2}{\frac{15*8}{28}}
+ +\frac{(10-\frac{15*20}{28})^2}{\frac{15*20}{28}}
+ +\frac{(3-\frac{13*8}{28})^2}{\frac{13*8}{28}}
+ +\frac{(10-\frac{13*20}{28})^2}{\frac{13*20}{28}}\]</span></p></li>
+<li><p>On calcule la zone de rejet (en trouvant la valeur critique <span class="math inline">\(c\)</span> dans la table):</p></li>
+</ol>
+<p><span class="math display">\[ddl = (q-1)(r-1) 
+\\\alpha=niveau~de ~libert&#xE9;~en~\%\]</span></p>
+<ol type="1">
+<li>Si <span class="math inline">\(T &gt; c\)</span>, on rejette <span class="math inline">\(H_0\)</span>, sinon on accepte <span class="math inline">\(H_0\)</span></li>
+</ol>
+<h2 id="limpl&#xE9;mentation-en-python">L&apos;impl&#xE9;mentation en python</h2>
+<p>Pour trouver uen valeur critique dans la table: </p><figure class="highlight python hljs"><table><tbody><tr><td class="code"><pre><code class="hljs python">ddl=<span class="hljs-number">10</span><br>alpha = <span class="hljs-number">5</span> / <span class="hljs-number">100</span><br>stat.chi2.ppf(<span class="hljs-number">1</span> - alpha,ddl)<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>etc ...</p>
 </body></html>
     
     </div>
@@ -241,7 +313,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    moment.locale("fr");
 </script>
 
 
@@ -356,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Que voulez-vous chercher ?" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -370,11 +442,11 @@ document.addEventListener("DOMContentLoaded", function() {
             TRANSLATION: {
                 POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                CATEGORIES: 'Catégories',
                 TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                UNTITLED: '(Sans Titre)',
             },
-            CONTENT_URL: '/content.json',
+            CONTENT_URL: '/content.fr.json',
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
