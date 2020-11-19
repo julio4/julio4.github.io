@@ -2,6 +2,51 @@
 body, button, input, select, textarea {
   font-family: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif; }
 
+a {
+  color: red !important;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  outline: none; }
+
+.navbar-main a {
+  color: inherit !important; }
+
+a:hover {
+  color: red !important;
+  outline: none; }
+
+.article-entry a {
+  border-bottom: 1px dotted transparent;
+  color: red; }
+
+.article-entry a:hover {
+  border-bottom-color: black; }
+
+.navbar-start a.navbar-item {
+  transition: color 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
+
+.navbar-start a.navbar-item::before {
+  background: red;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 10%;
+  left: 0;
+  bottom: 0;
+  opacity: 0.5;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
+
+.navbar-start a.navbar-item:hover, .navbar-start a.navbar-item:focus {
+  color: #fe628e; }
+
+.navbar-start a.navbar-item:hover::before, .navbar-start a.navbar-item:focus::before {
+  transform: scale3d(1, 1, 1); }
+
 a.tag.article-tag {
   font-size: 0.9rem;
   text-decoration: none; }
@@ -11,7 +56,7 @@ a.tag.article-tag {
     max-width: 800px;
     width: 800px; }
   .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
-    color: #3273dc; } }
+    color: red; } }
 
 .navbar-main {
   border-bottom: 1px solid #dbdbdb;
@@ -22,7 +67,7 @@ a.tag.article-tag {
   .navbar-main .navbar-item {
     text-align: center; }
   .navbar-main a.navbar-item.is-active {
-    color: #3273dc; }
+    color: red; }
   .navbar-main .toc .navbar-dropdown {
     max-height: 500px;
     overflow-y: auto; }
@@ -37,7 +82,7 @@ a.tag.article-tag {
 
 .article .article-title a,
 .article .article-meta a {
-  color: inherit;
+  color: inherit !important;
   border-bottom: 1px dotted transparent; }
   .article .article-title a:hover,
   .article .article-meta a:hover {
@@ -135,10 +180,10 @@ a.tag.article-tag {
     background-position: 4px 4px;
     background-repeat: no-repeat; }
   .article blockquote.colorquote.info {
-    border-color: #209cee;
-    background-color: #def0fd; }
+    border-color: red;
+    background-color: #ffcccc; }
     .article blockquote.colorquote.info:before {
-      background-color: #209cee;
+      background-color: red;
       background-image: url("../images/info.svg"); }
   .article blockquote.colorquote.success {
     border-color: #23d160;
@@ -153,10 +198,10 @@ a.tag.article-tag {
       background-color: #ffdd57;
       background-image: url("../images/question.svg"); }
   .article blockquote.colorquote.danger {
-    border-color: #ff3860;
-    background-color: #ffb3c2; }
+    border-color: #8100cc;
+    background-color: #bc47ff; }
     .article blockquote.colorquote.danger:before {
-      background-color: #ff3860;
+      background-color: #8100cc;
       background-image: url("../images/exclamation.svg"); }
 
 .article blockquote.pullquote {
@@ -276,7 +321,7 @@ a.tag.article-tag {
       text-align: center;
       display: inline-block; }
       .searchbox .searchbox-input-wrapper .searchbox-close:hover {
-        color: #3273dc; }
+        color: red; }
   .searchbox .searchbox-result-wrapper {
     left: 0;
     right: 0;
@@ -476,7 +521,7 @@ figure.highlight {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   color: #fff;
-  background: #3273dc; }
+  background: red; }
 
 .ins-section .ins-search-item:hover .ins-slug,
 .ins-section .ins-search-item.active .ins-slug,
