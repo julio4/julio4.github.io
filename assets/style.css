@@ -1,0 +1,100 @@
+
+/* base font size */
+html {
+    font-size: 10pt;
+}
+
+header {
+    display: none;
+}
+
+/* responsive media */
+img,
+svg {
+    max-height: 80vh;
+}
+
+/* POST TILES */
+.post-tile {
+    margin: 0 0 1rem;
+}
+
+.post-tile a {
+    display: inline-block;
+    padding: 0.1em 0.2em;
+    background-image: none !important;
+}
+
+.post-tile h3 {
+    margin: 0;
+}
+
+.post-tile p {
+    margin: 0.25rem 0 0;
+}
+
+.post-tile a:hover,
+.post-tile a:focus-visible {
+    background: rgba(0, 0, 0, 0.06);
+    outline: none;
+}
+
+figure[role="math"] {
+    zoom: 1.4;
+    margin-bottom: 0 !important;
+}
+
+/* Tuffle patches */
+
+/* Lists */
+section > ul {
+    width: 55%;
+    -webkit-padding-start: 1.4em !important;
+    list-style: none;
+    padding-left: 1.2em;
+}
+
+p + ul {
+    margin-top: 0;
+}
+
+p:has(+ ul) {
+    margin-bottom: 0;
+}
+
+ul li::before {
+content: "~";
+margin-left: -0.6em;
+margin-right: 0.3em;
+}
+
+/* Force the site to always start in light mode, ignoring system dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #FFF5EA !important;
+    color: #111 !important;
+  }
+  .hover-tufte-underline:hover,
+  .tufte-underline,
+  a:link {
+      text-shadow: .03em 0 #FFF5EA !important;
+  }
+}
+
+body.dark {
+    background-color: #151515;
+    color: #ddd;
+}
+
+body.dark a {
+    text-shadow: .03em 0 #151515;
+}
+
+body.dark .post-tile a:hover,
+body.dark .post-tile a:focus-visible {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+body.dark [role="math"] :is(img, svg, canvas, picture, video, object, embed) {
+    filter: invert(1) hue-rotate(180deg);
+}
